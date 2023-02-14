@@ -37,5 +37,5 @@ jobs:
       - imprime_data_macos
       
     steps:
-      - name: Imprime data atual
+      - name: Imprime data atual final
         run: date
