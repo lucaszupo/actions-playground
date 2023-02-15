@@ -2,18 +2,12 @@ name: Workflow Cria artefato
 
 on:
   push:
-  
-env:
-  VARIAVEL_1: Lucas Zupo
-  VARIAVEL_2: Sao Paulo
 
 jobs:
 
-  checkout_code:
-    name: checkout do codigo
+  criar_artefato:
+    name: criar artefato
     runs-on: ubuntu-latest
-    env:
-      VARIAVEL_JOB: 33
       
     steps:
     - name: Checkout
