@@ -1,0 +1,26 @@
+name: Workflow Cria artefato
+
+on:
+  push:
+  
+env:
+  VARIAVEL_1: Lucas Zupo
+  VARIAVEL_2: Sao Paulo
+
+jobs:
+
+  checkout_code:
+    name: checkout do codigo
+    runs-on: ubuntu-latest
+    env:
+      VARIAVEL_JOB: 33
+      
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3.3.0
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: ${{ vars.NOME }}
+        path: .
